@@ -31,22 +31,7 @@
 
 <script type="text/javascript">
 	jQuery().ready(function(){
-		// simple accordion
-		jQuery('#list1a').accordion();
-		jQuery('#list1b').accordion({
-			autoheight: false
-		});
-		
-		// second simple accordion with special markup
-		jQuery('#navigation').accordion({
-			active: false,
-			header: '.head',
-			navigation: true,
-			event: 'mouseover',
-			fillSpace: true,
-			animated: 'easeslide'
-		});
-		
+
 		// highly customized accordion
 		jQuery('#list2.sur').accordion({
 			event: 'mouseover',
@@ -57,31 +42,7 @@
 		}).bind("change.ui-accordion", function(event, ui) {
 			jQuery('<div>' + ui.oldHeader.text() + ' hidden, ' + ui.newHeader.text() + ' shown</div>').appendTo('#log');
 		});
-		
-		// first simple accordion with special markup
-		jQuery('#list3').accordion({
-			header: 'div.title',
-			active: false,
-			alwaysOpen: false,
-			animated: false,
-			autoheight: false
-		});
-		
-		var wizard = $("#wizard").accordion({
-			header: '.title',
-			event: false
-		});
-		
-		var wizardButtons = $([]);
-		$("div.title", wizard).each(function(index) {
-			wizardButtons = wizardButtons.add($(this)
-			.next()
-			.children(":button")
-			.filter(".next, .previous")
-			.click(function() {
-				wizard.accordion("activate", index + ($(this).is(".next") ? 1 : -1))
-			}));
-		});
+	
 		
 		// bind to change event of select to control first and seconds accordion
 		// similar to tab's plugin triggerTab(), without an extra method
@@ -195,8 +156,6 @@
   </head>
 
   <body class="text-center" onload=showWindow()>
-    <script src="https://git.hust.cc/canvas-nest.js/dist/canvas-nest.js"  color="255,20,147" opacity='0.7' zIndex="-2" count="100"></script>
-    <script type="text/javascript" src="https://git.hust.cc/canvas-nest.js/dist/canvas-nest.umd.js"></script>
     <audio src="music/DAOKO 米津玄師 - 打上花火.mp3" id="audio1" hidden="true"  loop="true">
     </audio>
     <audio src="music/生日快乐.mp3" id="audio2" hidden="true">
@@ -358,5 +317,7 @@
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
     <script src="popper.min.js"></script>
     <script src="bootstrap.min.js"></script>
+    <script src="https://git.hust.cc/canvas-nest.js/dist/canvas-nest.js"  color="255,20,147" opacity='0.7' zIndex="-2" count="100"></script>
+    <script type="text/javascript" src="https://git.hust.cc/canvas-nest.js/dist/canvas-nest.umd.js"></script>
   </body>
 </html>
