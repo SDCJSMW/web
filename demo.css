@@ -100,7 +100,7 @@ li { list-style-type: none; }
 	background-color: #5c5c5c;
 }
 #list2 dd { 
-	height: 100px; 
+	height: 200px; 
 	overflow: hidden; 
 }
 #list2 dt { 

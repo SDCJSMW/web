@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">  
+	<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+	<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="icon" href="favicon.ico">
 
     <title>Daughter Happy Birthday</title>
@@ -22,12 +25,12 @@
 
 	<link rel="stylesheet" href="demo.css" />
 	
-	<script type="text/javascript" src="../lib/jquery.js"></script>
-	<script type="text/javascript" src="../lib/chili-1.7.pack.js"></script>
-	
-	<script type="text/javascript" src="../lib/jquery.easing.js"></script>
-	<script type="text/javascript" src="../lib/jquery.dimensions.js"></script>
-	<script type="text/javascript" src="../jquery.accordion.js"></script>
+
+	<script type="text/javascript" src="lib/chili-1.7.pack.js"></script>	
+	<script type="text/javascript" src="lib/jquery.js"></script>
+	<script type="text/javascript" src="lib/jquery.easing.js"></script>
+	<script type="text/javascript" src="lib/jquery.dimensions.js"></script>
+	<script type="text/javascript" src="jquery.accordion.js"></script>
 
 <script type="text/javascript">
 	jQuery().ready(function(){
@@ -73,7 +76,7 @@
 	{
 	var d=new Date();
 	var t=d.toLocaleTimeString();
-	document.getElementById("clock").value="hi，现在是"+t;
+	document.getElementById("clock").value=" hi，现在是"+t;
 	}
 	setTimeout(function(){$(".game").hide()}, 0);
 	function wr()
@@ -91,13 +94,14 @@
 	}else{
 		alert("♡congratulation♡");
 		$(".game").hide();
-		$(".tip").hide();
+		$("#tip").hide();
 		$("#audio1")[0].pause();
 		$("#audio2")[0].play();
 		$("body").css("background-image","url(images/candle.jpg)");
 		setTimeout(function(){$("body").css("background-image","url(images/candle1.jpg)");}, 22000);
 		setTimeout(function(){$("body").css("background-image","url(images/002.jpg)");}, 43500);
 		$(".box-wrapper").css("height","100px");
+		$("#tip2").addClass("hidden")
 	}
 }
 	$(document).ready(function(){
@@ -126,11 +130,14 @@
 	  	$("#audio1")[0].play();
    		$(".game").show();
    		$(".more").hide();
+   		$(".well.well-lg").addClass("hidden");
    		$("#list2 dd").css("height","280px");
-   		$("#list2 dt").css("width","546px");
-   		setTimeout(function(){$(".tip").fadeIn()}, 120000);
-  		});
- 
+   		$("#list2 dt").css("width","526px");
+   		setTimeout(function(){$("p#tip").show()}, 60000);
+   		setTimeout(function(){$("#tip2").removeClass("hidden");}, 60000);
+
+   		});
+     
 
 });
 
@@ -224,15 +231,15 @@
       <header class="masthead mb-auto">
 
         <div class="inner">
-          <h4 class="masthead-brand">Dear周朵特</h4>
+          <h4 class="masthead-brand" >Dear周朵特</h4>
           <nav class="nav nav-masthead justify-content-center">
             <a class="nav-link active" href="exemple.html">Home</a>
-            <a class="nav-link" href="album.html">相册</a>
-            <a class="nav-link" href="test.html">留言</a>
+            <a class="nav-link" href="http://demo.cssmoban.com/cssthemes5/twts_80_studio/index.html">相册</a>
+            <a class="nav-link" href="http://www.runoob.com/try/bootstrap/layoutit/">创建网页</a>
           </nav>
       <hr>
-      <div style="margin:15px">
-      <input type="text" id="clock"/>
+      <div style="margin:25px;position:relative;top:10px;">
+      <input type="text" id="clock"/ style="border-style:outset;border-color:rgba(60,124,222,1.00);border-radius:50px;">
   	  </div>
       <h3 style="display:none">朵朵，生日快乐</h3>
       <p id="1" class="note" style="display:none">你是独一无二的存在，有着天马行空的想象，是最可爱的女孩</p>
@@ -241,47 +248,131 @@
       <p id="4" class="note" style="display:none">对于某些人而言，你是存于世间的美好</p>
 
       <dl id="list2" class="sur" style="display:inline">
-			<dt class="pink">↑number</dt>
+			<dt class="pink selected">↑number</dt>
 			<dd >
-				<p class="more">这是个比较简单粗糙的小礼物，但还是希望它给你带来了一些惊喜</p>
-				<img src="images/p4.png" class="game" width="546px" height="100%"/>
+				<div class="well well-lg">
+				<p class="more" >这是个比较简单粗糙的小礼物，但还是希望它给你带来了一些惊喜</p>
+				</div>
+				<img src="images/p4.png" class="game" width="546px" height="100%" />
 			</dd>
 			<dt class="black">↑number</dt>
 			<dd >
+				<div class="well well-lg">
 				<p class="more">你现在知道我那个时候为什么问你喜欢什么颜色了吧，没错就是从那时候开始就在准备这个了，它们组合在一起看上去真的还挺不错,蛮有时尚感的</p>
+				</div>
 				<img src="images/p8.png" class="game" width="546px" height="100%"/>
 			</dd>
 			<dt class="purple">↑number</dt>
 			<dd >
-				<p class="more">你应该注意到鼠标特效了吧，也许你正在玩这个，我起初也玩了好久，有种特殊的吸引力</p>
+				<div class="well well-lg">
+				<p class="more">你大概也注意到鼠标特效了吧，也许你正在玩这个，我起初也玩了好久，有种特殊的吸引力</p>
+				</div>
 				<img src="images/p0.jpg" class="game" width="546px" height="100%"/>
 			</dd>
 			<dt class="white">↑number</dt>
 			<dd >
-				<p class="more"> 左边的翻糖蛋糕你试着点击了吗，抱歉它不是真的生日蛋糕，虽然我真的很想把它送给你，但我想也许还不是时候。我其实不善表达，以前鼓起勇气说了很多瞎话，后来在和自己对话过程中，发现自己真的把你当成了很重要的人了，这次那些漂亮话不再是为了取悦某人。认识那么久了，你应该发现和我脑回路和普通人可能不太一样，很难揣测出我的想法，(ゝ∀･)，其实我能感觉到你试着接纳我，感觉我们已经是关系不错的朋友了。</p>
+				<div class="well well-lg">
+				<p class="more"> 左边的翻糖蛋糕你试着点击了吗，抱歉它不是真的生日蛋糕，虽然我真的很想把它送给你，但也许还不是时候。我其实不善表达，以前鼓起勇气说了很多瞎话，后来在和自己对话过程中，发现自己真的把你当成了很重要的人了，这次那些漂亮话不再是为了取悦某人。认识那么久了，你应该发现和我脑回路和普通人可能不太一样，很难揣测出我的想法，(ゝ∀･)，其实能感觉到你试着接纳我，感觉我们已经是关系很不错的朋友了。</p>
+				</div>
 				<img src="images/p1.png" class="game" width="546px" height="100%"/>
 			</dd>
 			<dt class="pink">↑number</dt>
 			<dd >
-				<p class="more">虽然这个小网页说不上有多少技术含量，但还是有我的一番心意，绞尽脑汁去想拿出能让你眼前一亮的创意，这个过程我边学边用也算是对自己的历练吧。起初是想让你感受到网页前端的魅力，后来醒悟自己需要学习的地方还有很多，(^0^)。话说回来，我还是尽力让这个礼物成为你一次难忘的回忆，这个web并不像看上去那么简单，我可是精心准备了好久呢<br>【心虚(´・ω・｀)】</p>
+				<div class="well well-lg">
+				<p class="more">虽然这个小网页说不上有多少技术含量，但还是有我的一番心意，绞尽脑汁去想拿出能让你眼前一亮的创意，这个过程我边学边用也算是对自己的历练吧。起初是想让你感受到网页前端的魅力，后来醒悟自己需要学习的地方还有很多，(^0^)。话说回来，我还是尽力让这个礼物成为你一次难忘的回忆，这个web并不像看上去那么简单，我可是精心准备了好久呢，请顺着往下看吧<br>【心虚(´・ω・｀)】</p>
+				</div>
 				<img src="images/p11.png" class="game" width="546px" height="100%"/>
 			</dd>
 			<dt class="black">↑number</dt>
 			<dd >
-				<p class="more">这是个比较简单粗糙的小礼物，但还是希望它能给你带来一些惊喜</p>
+				<div class="well well-lg">
+				<p class="more">我真的有好多话想和你说，在这里却不知从何说起。我想要写一首你的赞美诗，来赞美我心中最向往、最纯真的爱情，可我不希望用煽情的话来使得你感动，让你的明慧的双眸被一时的情绪蒙蔽；我也想用那些俏皮的情话，讨好你来博得你的欢心。不过我也不是不擅长这些，我有的，是一颗简单的希望你快乐的心，明明很弱小，却总想要守护者什么，有些可笑吧。无论外面的世界如何的兵荒马乱，你始终是我内心的一方净土。原谅我的自作主张吧，你就像是一束七色阳光，我怎能、又怎会阻挡你驱散我世界的黑白</p>
+				</div>
 				<img src="images/p111.jpg" class="game" width="546px" height="100%"/>
 			</dd>
 			<dt class="purple" id="tips">↑</dt>
 			<dd >
-				<p class="more">这是个比较简单粗糙的小礼物，但还是希望它能给你带来一些惊喜</p>
+				<div class="well well-lg">
+				<p class="more">上面的措辞可能有些过于矫情了，我还是很希望能当面与你交谈。我们就说说话，不管聊什么，我都会当作一种享受，咳咳，我这么说是不是有些不妥，有些谄媚的味道？哈哈，对我而言，越成长越强烈地感受到，有时候出去玩或是聊天，最最重要的不是去哪玩、玩什么，不是聊什么内容，而是取决于和谁在一玩、一起聊天。我不会逃避内心真实的反映，和你一起的活动总是最开心的。</p>
+				</div>
 				<img src="images/jm.jpeg" class="game" width="546px" height="100%"/>
 			</dd>
-			<dt class="white selected">password</dt>
+			<dt class="white ">password</dt>
 			<dd >
-				<p class="more">这是个比较简单粗糙的小礼物，但还是希望它能给你带来一些惊喜</p>
-				<input type="text" class="game" id="pd" >
-				<input type="button" value="确认" class="game" onclick="validate()">
-				<p style="display:none" class="tip">这是个6位数的密码</p>
+				<div class="well well-lg">
+				<p class="more">最后是一个为你准备的解密小游戏，点击下面的play按键，你会看到几张图片，从中推理出密码，解密成功后会有惊喜，相信凭你的智慧一定能迅速破解，当然你实在解不出可以让我提示你一下，嘿嘿，我还是用了点心思的，也不是那么容易就破解啦，希望被实力打脸。</p>
+				</div>
+				<input type="text" class="game" id="pd" placeholder="  ******" style="border-style:outset;border-color:rgba(255,20,147,1.00);border-radius:50px;margin:5px;position:relative;top:10px;">
+				<input type="button" value="确认" class="game btn btn-lg btn-secondary" onclick="validate()" style="border-style:outset;border-color:rgba(60,124,222,1.00);margin:5px;position:relative;top:10px;background-color: white;">
+				<div style="margin:25px;position:relative;top:10px;">
+				<p style="display:none " id="tip"  >这是个6位数的密码</p>
+				</div>
+				<div class="btn-group-vertical hidden" role="group" aria-label="Button group with nested dropdown" id="tip2">
+
+  				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图1提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">叉子，左右对称</a>
+    			</div>
+				</div>
+
+				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图2提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">镜面，手镯</a>
+    			</div>
+				</div>
+
+				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图3提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">戒指</a>
+    			</div>
+				</div>
+
+				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图4提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">被涂改的电线杆</a>
+    			</div>
+				</div>
+
+				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图5提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">旗杆</a>
+    			</div>
+				</div>
+
+				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图6提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">老虎机</a>
+    			</div>
+				</div>
+
+				<div class="btn-group" role="group">
+    			<button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      			图7提示
+    			</button>
+    			<div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+     			 <a class="dropdown-item" href="#">镜面，全部反转</a>
+    			</div>
+				</div>
+
+				</div>
 			</dd>
 		</dl>                                           
       <hr />
